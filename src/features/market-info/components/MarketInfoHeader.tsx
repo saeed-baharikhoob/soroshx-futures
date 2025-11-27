@@ -120,18 +120,16 @@ export const MarketInfoHeader = () => {
               ₿
             </div>
             <div className="flex items-center gap-1">
-              <span className="text-white font-semibold">
+              <span className="text-white font-semibold text-md md:text-xl">
                 {currentPair.baseAsset}/{currentPair.quoteAsset}
               </span>
-              <span className="text-xs text-muted-foreground bg-background-elevated px-2 py-0.5 rounded">
-                Perp
-              </span>
+
               <ChevronDown className="w-4 h-4 text-muted-foreground" />
             </div>
           </div>
 
           <div className="flex flex-col min-w-fit md:min-w-[150px]">
-            <span className={`text-lg md:text-xl lg:text-2xl font-bold ${isPriceUp ? 'text-trading-green' : 'text-trading-red'}`}>
+            <span className={`text-md md:text-xl lg:text-2xl font-bold ${isPriceUp ? 'text-trading-green' : 'text-trading-red'}`}>
               ${formatPrice(ticker?.lastPrice || currentPair.lastPrice)}
             </span>
             <span className="text-xs text-muted-foreground">Mark Price</span>

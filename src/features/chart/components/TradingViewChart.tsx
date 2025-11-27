@@ -54,8 +54,6 @@ export const TradingViewChart = () => {
   useEffect(() => {
     const handleResize = () => {
       if (widgetRef.current && containerRef.current) {
-        const width = containerRef.current.clientWidth
-        const height = containerRef.current.clientHeight
         if (window.TradingView && currentPair) {
           initWidget()
         }
