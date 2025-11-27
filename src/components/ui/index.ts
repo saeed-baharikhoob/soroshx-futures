@@ -1,0 +1,6 @@
+export { Button, buttonVariants } from './button'
+export { Input } from './input'
+export { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogDescription } from './dialog'
+export { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './select'
+export { Tabs, TabsContent, TabsList, TabsTrigger } from './tabs'
+export { Switch } from './switch'
