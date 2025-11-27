@@ -24,7 +24,7 @@ export const MobileTradingLayout = () => {
         {activeTab === 'positions' && <PositionsTable />}
       </div>
 
-      <div className="flex border-t border-border bg-background-card">
+      <div className="flex absolute bottom-2 right-0 rounded-[15px] w-[90%] border-t border-border bg-background-card">
         <button
           onClick={() => setActiveTab('chart')}
           className={`flex-1 py-3 text-sm ${activeTab === 'chart' ? 'text-white border-t-2 border-blue-500' : 'text-gray-500'}`}
