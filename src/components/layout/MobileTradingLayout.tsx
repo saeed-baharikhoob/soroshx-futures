@@ -7,7 +7,6 @@ import { Orderbook } from '@/features/orderbook'
 import { PositionsTable } from '@/features/positions'
 import { TradingForm } from '@/features/trading-form'
 import { BottomSheet } from '@/components/shared/BottomSheet'
-import { Activity } from 'react'
 
 type MobileTab = 'chart' | 'orderbook' | 'positions'
 
@@ -20,21 +19,21 @@ export const MobileTradingLayout = () => {
             <MarketInfoHeader />
 
             <div className="flex-1 overflow-hidden relative">
-                <Activity isActive={activeTab === 'chart'}>
-                    <div style={{ display: activeTab === 'chart' ? 'block' : 'none', height: '100%' }}>
-                        <TradingViewChart />
-                    </div>
-                </Activity>
-                <Activity isActive={activeTab === 'orderbook'}>
-                    <div style={{ display: activeTab === 'orderbook' ? 'block' : 'none', height: '100%' }}>
-                        <Orderbook />
-                    </div>
-                </Activity>
-                <Activity isActive={activeTab === 'positions'}>
-                    <div style={{ display: activeTab === 'positions' ? 'block' : 'none', height: '100%' }}>
-                        <PositionsTable />
-                    </div>
-                </Activity>
+                <div
+                    style={{ display: activeTab === 'chart' ? 'block' : 'none', height: '100%' }}
+                >
+                    <TradingViewChart />
+                </div>
+                <div
+                    style={{ display: activeTab === 'orderbook' ? 'block' : 'none', height: '100%' }}
+                >
+                    <Orderbook />
+                </div>
+                <div
+                    style={{ display: activeTab === 'positions' ? 'block' : 'none', height: '100%' }}
+                >
+                    <PositionsTable />
+                </div>
             </div>
 
             <div className="flex absolute bottom-0 right-0 w-full border-t border-border bg-background-card">
